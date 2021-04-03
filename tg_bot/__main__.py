@@ -141,12 +141,12 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="🧑‍💻My Creator🧑‍💻",
+                                                                                   InlineKeyboardButton(text="🏇PEMBUAT SAYA 🏇",
                                                                        url="t.me/diemmmmmmmmmm")],
-                                                                                   [InlineKeyboardButton(text="ADD GRAND OFFICIAL TO YOUR GROUP",
+                                                                                   [InlineKeyboardButton(text="ADD SAYA TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="Source Code",
-                                                                       url="https://github.com/BOT-PROJECT-MANSIEZ/MANSIEZZ-BOT")
+                                                                                   InlineKeyboardButton(text="REPO PETERCORD USERBOT",
+                                                                       url="https://github.com/ilham77mansiz/Petercord-Userbotilham/tree/Petercord-Userbotilham")
                                                                                  ]]))
 
     else:
