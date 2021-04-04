@@ -50,7 +50,7 @@
       },
       "GBAN_LOGS": {
          "description": "Gban log channel, include the hyphen too: ex: -123456",
-         "value": "-123"
+         "value": "-1001423396677"
       },
       "CASH_API_KEY": {
          "description": "Required for currency converter",
@@ -116,5 +116,5 @@
    ],
    "logo": "https://telegra.ph/file/c30f62ab3a56b2424e05c.jpg",
    "name": "ILham Mansiezz",
-   "repository": "https://github.com/legendx22/GRANDROBOT"
+   "repository": "https://github.com/BOT-PROJECT-MANSIEZ/MANSIEZZ-BOT"
 }
