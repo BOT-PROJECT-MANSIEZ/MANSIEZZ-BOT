@@ -93,7 +93,7 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
 
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text("YEAH LEGENDS  IS HERE")
+                update.effective_message.reply_text("YEAH SAYA KEMBALI")
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
                                f"Bot Owner just joined the chat")
@@ -120,7 +120,7 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
 
             # Welcome yourself
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("hello 😎 thanks for using me make sure you promote me then i can safe your group for spammers 🥰🥰🥰")
+                update.effective_message.reply_text("hello 🏇 thanks for using me make sure you promote me then i can safe your group for spammers 🏇🏇🏇")
 
             else:
                 # If welcome message is media, send with appropriate function
@@ -272,7 +272,7 @@ def left_member(bot: Bot, update: Update):
 
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("ooo sed legend is gone")
+                update.effective_message.reply_text("ooo sed ilham is gone")
                 return
 
             # Give the devs a special goodbye
