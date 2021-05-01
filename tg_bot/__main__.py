@@ -27,7 +27,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 **Hello {}, NAMA SAYA ADALAH {}!** 
-Saya adalah **SUPERB**  group kalian loh.
+Saya adalah **ROBOT**  group kalian loh.
 Ketik perintah /help.
 
 """
@@ -139,14 +139,16 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 TECHNO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔶PERTOLONGAN🔶",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="🏇PEMBUAT SAYA 🏇",
+                                                                                   InlineKeyboardButton(text="🔮OWNERS🔮",
                                                                        url="t.me/diemmmmmmmmmm")],
+                                                                                   InlineKeyboardButton(text="📌INSTAGRAM📌",
+                                                                       url="https://www.instagram.com/imansiez77/")],
                                                                                    [InlineKeyboardButton(text="ADD SAYA TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
                                                                                    InlineKeyboardButton(text="REPO PETERCORD USERBOT",
-                                                                       url="https://github.com/ilham77mansiz/Petercord-Userbotilham/tree/Petercord-Userbotilham")
+                                                                       url="https://github.com/ilham77mansiz/-PETERCORD-")
                                                                                  ]]))
 
     else:
