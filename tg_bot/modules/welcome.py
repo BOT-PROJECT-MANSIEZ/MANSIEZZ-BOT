@@ -96,23 +96,23 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
                 update.effective_message.reply_text("YEAH SAYA KEMBALI")
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
-                               f"Bot Owner just joined the chat")
+                               f"Bot Owner SELAMAT BERGABUNG TERIMAH KASIH TELAH MENCIPTAKAN AKU😊")
 
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
-                update.effective_message.reply_text("YEAH I SEE PRO PLAYER IS HERE!")
+                update.effective_message.reply_text("YEAH SAYA MENEMUKAN ORANG INI!")
 
             # Welcome Sudos
             elif new_mem.id in SUDO_USERS:
-                update.effective_message.reply_text("Huh! A Powered just joined! Stay Alert!")
+                update.effective_message.reply_text("Huh! KUCARI² KEMANA AJA KAU?!")
 
             # Welcome Support
             elif new_mem.id in SUPPORT_USERS:
-                update.effective_message.reply_text("Hey! A support user joined!")
+                update.effective_message.reply_text("Hey! SELAMAT DATANG DI SUPPORT GRUP SAYA SIAP MEMBANTU!")
 
             # Welcome Whitelisted
             elif new_mem.id in TIGER_USERS:
-                update.effective_message.reply_text("Oof! A Tiger disaster just joined!")
+                update.effective_message.reply_text("Oof! MULAI MULAI HEHE...!")
 
             # Welcome Tigers
             elif new_mem.id in WHITELIST_USERS:
@@ -120,7 +120,7 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
 
             # Welcome yourself
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("hello 🏇 thanks for using me make sure you promote me then i can safe your group for spammers 🏇🏇🏇")
+                update.effective_message.reply_text("HELLO PROMOSIKAN SAYA, SAYA AKAN MEMBASMI PENGGUNA YANG MERESAHKAN DUNIA ")
 
             else:
                 # If welcome message is media, send with appropriate function
@@ -272,7 +272,7 @@ def left_member(bot: Bot, update: Update):
 
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("ooo sed ilham is gone")
+                update.effective_message.reply_text("PEMBUAT SAYA LIHAT ADA YANG KELUAR HUH..")
                 return
 
             # Give the devs a special goodbye
