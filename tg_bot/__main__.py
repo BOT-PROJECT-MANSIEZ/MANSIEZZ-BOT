@@ -49,7 +49,7 @@ Hello! Nama saya *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/c30f62ab3a56b2424e05c.jpg"
+TECHNO_IMG = "https://telegra.ph/file/ae6156410d484fc975b09.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -149,7 +149,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
                                                                                    InlineKeyboardButton(text="REPO PETERCORD USERBOT",
                                                                        url="https://github.com/ilham77mansiz/-PETERCORD-")
-                                                                                 ]]))
+                                                                                 
 
     else:
         update.effective_message.reply_text("Yuss, I am Already ONline")
