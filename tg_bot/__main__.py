@@ -141,16 +141,14 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔶PERTOLONGAN🔶",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="🔮OWNERS🔮",
-                                                                       url="t.me/diemmmmmmmmmm")],
                                                                                    InlineKeyboardButton(text="📌INSTAGRAM📌",
                                                                        url="https://www.instagram.com/imansiez77/")],
                                                                                    [InlineKeyboardButton(text="ADD SAYA TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
                                                                                    InlineKeyboardButton(text="REPO PETERCORD USERBOT",
                                                                        url="https://github.com/ilham77mansiz/-PETERCORD-")
+                                                                                 ]]))
                                                                                  
-
     else:
         update.effective_message.reply_text("Yuss, I am Already ONline")
 
