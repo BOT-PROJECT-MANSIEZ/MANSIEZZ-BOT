@@ -72,7 +72,7 @@ def ping(bot: Bot, update: Update):
     telegram_ping = ping_func(["Telegram"])[0].split(": ", 1)[1]
     uptime = get_readable_time((time.time() - StartTime))
 
-    reply_msg = ("PONG!!\n"
+    reply_msg = ("PONG🕠🕠🕕🕕!!\n"
                  "<b>Time Taken:</b> <code>{}</code>\n"
                  "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime))
 
@@ -104,6 +104,6 @@ PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
 dispatcher.add_handler(PING_HANDLER)
 dispatcher.add_handler(PINGALL_HANDLER)
 
-__mod_name__ = "PING"
+__mod_name__ = "🕔PING"
 __command_list__ = ["ping", "pingall"]
 __handlers__ = [PING_HANDLER, PINGALL_HANDLER]
