@@ -618,12 +618,12 @@ WELC_HELP_TXT = ("Your group's welcome/goodbye messages can be personalised in m
                  "replying to the desired media, and calling /setwelcome.")
 
 WELC_MUTE_HELP_TXT = (
-    "You can get the bot to mute new people who join your group and hence prevent spambots from flooding your group. "
-    "The following options are possible:\n"
-    "- `/welcomemute soft`: restricts new members from sending media for 24 hours.\n"
-    "- `/welcomemute strong`: mutes new members till they tap on a button thereby verifying they're human.\n"
-    "- `/welcomemute off`: turns off welcomemute.\n"
-    "`Note:` Strong mode kicks a user from the chat if they dont verify in 160seconds. They can always rejoin though"
+    "Anda bisa mendapatkan bot untuk menonaktifkan orang baru yang bergabung dengan grup Anda dan karenanya mencegah robot spam membanjiri grup Anda.`"
+    "Opsi berikut dimungkinkan: \n"
+    "- `/welcomemute soft: membatasi anggota baru mengirim media selama 24 jam.` \n"
+    "- `/welcomemute strong: nonaktifkan anggota baru hingga mereka mengetuk tombol sehingga memverifikasi bahwa mereka manusia.` \n"
+    "- `/welcomemute off: matikan welcomemute. \n"
+    "`Catatan: Mode Kuat menendang pengguna dari obrolan jika mereka tidak memverifikasi dalam 160 detik. Namun, mereka selalu dapat bergabung kembali`"
                      )
 
 @run_async
@@ -664,18 +664,18 @@ def __chat_settings__(chat_id, user_id):
 __help__ = """
 {}
 
-*Admin only:*
- - /welcome <on/off>: enable/disable welcome messages.
- - /welcome: shows current welcome settings.
- - /welcome noformat: shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- - /goodbye -> same usage and args as /welcome.
- - /setwelcome <sometext>: set a custom welcome message. If used replying to media, uses that media.
- - /setgoodbye <sometext>: set a custom goodbye message. If used replying to media, uses that media.
- - /resetwelcome: reset to the default welcome message.
- - /resetgoodbye: reset to the default goodbye message.
- - /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.
- - /welcomemutehelp: gives information about welcome mutes.
- - /welcomehelp: view more formatting information for custom welcome/goodbye messages.
+*Admin Satu²nya:*
+- /welcome <on / off>: mengaktifkan / menonaktifkan pesan selamat datang.
+- /selamat datang: menunjukkan pengaturan selamat datang saat ini.
+- /welcome noformat: menampilkan pengaturan selamat datang saat ini, tanpa format - berguna untuk mendaur ulang pesan selamat datang Anda!
+- /selamat tinggal -> penggunaan dan argumen yang sama dengan / selamat datang.
+- /setwelcome <sometext>: setel pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
+- /setgoodbye <sometext>: menyetel pesan selamat tinggal kustom. Jika digunakan membalas media, gunakan media itu.
+- /resetwelcome: reset ke pesan selamat datang default.
+- /resetgoodbye: reset ke pesan selamat tinggal default.
+- /cleanwelcome <on / off>: Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spamming pada obrolan.
+- /welcomemutehelp: memberikan informasi tentang bisu selamat datang.
+- /welcomehelp: lihat lebih banyak informasi pemformatan untuk pesan selamat datang / selamat tinggal khusus..
 """.format(WELC_HELP_TXT)
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member, pass_job_queue=True)
@@ -706,7 +706,7 @@ dispatcher.add_handler(WELCOMEMUTE_HANDLER)
 dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 
-__mod_name__ = "GREETINGS"
+__mod_name__ = "🙋WELCOME"
 __command_list__ = ["welcome", "goodbye", "setwelcome", "setgoodbye", "resetwelcome", "resetgoodbye",
                     "welcomemute", "cleanwelcome", "welcomehelp", "welcomemutehelp"]
 __handlers__ = [NEW_MEM_HANDLER, LEFT_MEM_HANDLER, WELC_PREF_HANDLER, GOODBYE_PREF_HANDLER,
