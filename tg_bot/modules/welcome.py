@@ -665,17 +665,17 @@ __help__ = """
 {}
 
 *Admin Satu²nya:*
-- /welcome <on / off>: mengaktifkan / menonaktifkan pesan selamat datang.
+- /welcome <on / off>: mengaktifkan menonaktifkan pesan selamat datang.
 - /selamat datang: menunjukkan pengaturan selamat datang saat ini.
 - /welcome noformat: menampilkan pengaturan selamat datang saat ini, tanpa format - berguna untuk mendaur ulang pesan selamat datang Anda!
-- /selamat tinggal -> penggunaan dan argumen yang sama dengan / selamat datang.
+- /selamat tinggal -> penggunaan dan argumen yang sama dengan selamat datang.
 - /setwelcome <sometext>: setel pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
 - /setgoodbye <sometext>: menyetel pesan selamat tinggal kustom. Jika digunakan membalas media, gunakan media itu.
 - /resetwelcome: reset ke pesan selamat datang default.
 - /resetgoodbye: reset ke pesan selamat tinggal default.
 - /cleanwelcome <on / off>: Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spamming pada obrolan.
 - /welcomemutehelp: memberikan informasi tentang bisu selamat datang.
-- /welcomehelp: lihat lebih banyak informasi pemformatan untuk pesan selamat datang / selamat tinggal khusus..
+- /welcomehelp: lihat lebih banyak informasi pemformatan untuk pesan selamat datang selamat tinggal khusus..
 """.format(WELC_HELP_TXT)
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member, pass_job_queue=True)
