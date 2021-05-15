@@ -43,7 +43,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text("Oh yeah, ban myself, noob!")
+        message.reply_text("Oh ya, larang diriku sendiri, noob!")
         return log_message
 
     # dev users to bypass whitelist protection incase of abuse
@@ -94,20 +94,20 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:).")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("Karena kau cuekin adminnya ya dikick:).")
             return log_message
         else:
             raise
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:)?")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
@@ -156,7 +156,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
             LOGGER.warning(update)
             LOGGER.exception("ERROR banning user %s in chat %s (%s) due to %s",
                              user_id, chat.title, chat.id, excp.message)
-            message.reply_text("Well damn, I can't ban that user.")
+            message.reply_text("Karena kau cuekin adminnya ya dikick:).")
 
     return log_message
 
@@ -176,24 +176,24 @@ def punch(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:).")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("Karena kau cuekin adminnya ya dikick:).")
             return log_message
         else:
             raise
 
     if user_id == bot.id:
-        message.reply_text("Yeahhh I'm not gonna do that.")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:).")
         return log_message
 
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("I really wish I could punch this user....")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:)....")
         return log_message
 
     res = chat.unban_member(user_id)  # unban on current user = kick
@@ -211,7 +211,7 @@ def punch(bot: Bot, update: Update, args: List[str]) -> str:
         return log
 
     else:
-        message.reply_text("Well damn, I can't punch that user.")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:).")
 
     return log_message
 
@@ -222,7 +222,7 @@ def punch(bot: Bot, update: Update, args: List[str]) -> str:
 def punchme(bot: Bot, update: Update):
     user_id = update.effective_message.from_user.id
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("I wish I could... but you're an admin.")
+        update.effective_message.reply_text("Karena kau cuekin adminnya ya dikick:).")
         return
 
     res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
@@ -247,7 +247,7 @@ def unban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("Karena kau cuekin adminnya ya dikick:).")
         return log_message
 
     try:
